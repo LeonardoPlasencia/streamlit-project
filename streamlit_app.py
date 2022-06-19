@@ -19,6 +19,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 import gdown
+import os
 
 # 0. TITULO DE PROYECTO
 st.title('Nombre del proyecto')
@@ -27,6 +28,9 @@ st.title('Nombre del proyecto')
 
 # Lectura de datos desde CSV
 #id = 1op-iq0XhBXBQOPlagCPE9TzFsFkkNVjQ
+if not os.path.exists(path):
+  os.makedirs('downloads')
+
 @st.experimental_memo
 def download_data():
   #https://drive.google.com/uc?id=
