@@ -28,7 +28,7 @@ st.title('Nombre del proyecto')
 
 # Lectura de datos desde CSV
 #id = 1op-iq0XhBXBQOPlagCPE9TzFsFkkNVjQ
-if not os.path.exists(path):
+if not os.path.exists('downloads'):
   os.makedirs('downloads')
 
 @st.experimental_memo
