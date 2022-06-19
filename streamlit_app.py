@@ -31,11 +31,11 @@ st.title('Nombre del proyecto')
 def download_data():
   #https://drive.google.com/uc?id=
   url = "https://drive.google.com/uc?id=1op-iq0XhBXBQOPlagCPE9TzFsFkkNVjQ"
-  output= "data.csv"
+  output = "downloads/data.csv"
   gdown.download(url,output,quiet = False)
   
 download_data()
-df = pd.read_csv("data.csv", sep = ";", parse_dates = ["FECHA_CORTE","FECHA_RESULTADO"])
+df = pd.read_csv("downloads/data.csv", sep = ";", parse_dates = ["FECHA_CORTE","FECHA_RESULTADO"])
 # Simplificacion del dataset (retiro de columnas)
 df = df.drop(columns = ["DISTRITO","FECHA_CORTE","FECHA_RESULTADO","UBIGEO","id_persona"])
 
